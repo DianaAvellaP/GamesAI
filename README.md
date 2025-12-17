@@ -1,2 +1,0 @@
-# GamesAI
-Games practice
