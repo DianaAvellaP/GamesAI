@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-quiz: Conceptos básicos de IA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Pantalla inicial / Header -->
+        <header class="header quiz-header">
+            <h1>Mini-quiz: Conceptos básicos de IA</h1>
+            <p class="subtitle">Repasa conceptos esenciales sobre Inteligencia Artificial: diferencias entre ANI, AGI y ASI, ejemplos y aplicaciones.</p>
+            <p class="subtitle small">Responde hasta 5 preguntas aleatorias. Puedes saltar, revisar y recibir feedback inmediato.</p>
+            <div class="start-actions">
+                <button id="btn-tomar-quiz" class="btn btn-primary">Tomar Quiz</button>
+            </div>
+        </header>
+
+        <!-- Área de quiz (oculta hasta iniciar) -->
+        <main id="quiz-area" class="quiz-area" style="display:none;">
+            <div class="card">
+                <div class="quiz-top">
+                    <div id="quiz-title" class="quiz-title">Pregunta</div>
+                    <div id="quiz-progress" class="quiz-progress">0 / 5</div>
+                </div>
+
+                <div id="question-container" class="question-container">
+                    <p id="question-text" class="question-text">Aquí aparecerá la pregunta...</p>
+                    <div id="choices-container" class="choices-container">
+                        <!-- Opciones a/b/c/d -->
+                    </div>
+                </div>
+
+                <div class="quiz-actions">
+                    <button id="btn-saltar" class="btn btn-secondary">Saltar</button>
+                    <button id="btn-revisar" class="btn btn-success" disabled>Revisar y continuar</button>
+                </div>
+
+                <div id="feedback-container" class="feedback-container small"></div>
+            </div>
+
+            <div class="result-actions">
+                <button id="btn-finalizar" class="btn btn-primary" style="display:none;">Ver resultados</button>
+            </div>
+        </main>
+            <!-- Contenedor de resultados dentro del área del quiz -->
+            <div id="results-summary" class="card" style="display:none; margin-top:16px;">
+                <h2>Resultados del Mini-quiz</h2>
+                <div id="results-content" class="resultados-finales"></div>
+                <div id="results-actions" style="margin-top:16px;"></div>
+            </div>
+
+        <!-- Modal de resultados finales (deprecated, conservado) -->
+        <div id="modal-resultados" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Resultados del Mini-quiz</h2>
+                <div id="resultados-finales" class="resultados-finales"></div>
+                <div id="acciones-finales" style="margin-top:40px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
