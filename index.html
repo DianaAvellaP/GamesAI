@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina la IA - Juego</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎯 ADIVINA LA IA</h1>
+            <p class="subtitle">Adivina las 4 aplicaciones de IA a partir de pistas progresivas</p>
+            <p class="subtitle">Apps posibles: ChatGPT, Gemini, Perplexity, Claude</p>
+        </header>
+
+        <!-- Información de la IA actual -->
+        <div class="info-section">
+            <div class="info-card">
+                <span id="ia-numero" class="ia-info">Preparando juego...</span>
+            </div>
+        </div>
+
+        <!-- Área de pistas -->
+        <div class="pistas-section">
+            <div class="card">
+                <h2>Pistas</h2>
+                <div id="pistas-container" class="pistas-container">
+                    <p class="placeholder">Las pistas aparecerán aquí...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Área de entrada -->
+        <div class="input-section">
+            <label for="respuesta-input">Tu respuesta:</label>
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="respuesta-input" 
+                    placeholder="Escribe tu respuesta aquí..."
+                    autocomplete="off"
+                >
+                <button id="btn-verificar" class="btn btn-primary">Verificar</button>
+            </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="actions-section">
+            <button id="btn-opciones" class="btn btn-secondary">Ver Opciones</button>
+            <button id="btn-nuevo-juego" class="btn btn-success" style="display: none;">Nuevo Juego</button>
+            <button id="btn-salir" class="btn btn-danger">Salir</button>
+        </div>
+
+        <!-- Área de feedback -->
+        <div class="feedback-section">
+            <div class="card">
+                <h2>Resultado</h2>
+                <div id="feedback-container" class="feedback-container">
+                    <p class="placeholder">Los resultados aparecerán aquí...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barra de progreso -->
+        <div class="progress-section">
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <p id="progress-text" class="progress-text">Progreso: 0/4 IAs completadas</p>
+        </div>
+    </div>
+
+    <!-- Modal de opciones -->
+    <div id="modal-opciones" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Opciones Posibles</h2>
+            <ul id="opciones-lista" class="opciones-lista"></ul>
+        </div>
+    </div>
+
+    <!-- Modal de resultados finales -->
+    <div id="modal-resultados" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>🎉 Juego Completado</h2>
+            <div id="resultados-finales" class="resultados-finales"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
